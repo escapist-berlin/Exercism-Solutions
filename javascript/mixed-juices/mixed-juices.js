@@ -14,19 +14,14 @@ export function timeToMixJuice(name) {
   switch(name) {
     case 'Pure Strawberry Joy':
       return 0.5;
-      break;
     case 'Energizer':
       return 1.5;
-      break;
     case 'Green Garden':
       return 1.5;
-      break;
     case 'Tropical Island':
       return 3;
-      break;
     case 'All or Nothing':
       return 5;
-      break;
     default:
       return 2.5;
   }
@@ -42,33 +37,41 @@ export function timeToMixJuice(name) {
  */
 export function limesToCut(wedgesNeeded, limes) {
 
-  let countOfIterations = 0; // 1 + 1 + 1 + 1
-  let numOfWedges = 0; // 6 + 6 + 10 + 8
+  let numOfLimes = 0; // 4
 
-  while (numOfWedges <= wedgesNeeded) {
+  while (wedgesNeeded > 0 && limes.length > 0) {
 
-    limes.forEach((lime) => {
+    numOfLimes += 1;
 
-      switch(lime) {
+    switch(limes.shift()) {
         case 'small':
-          numOfWedges += 6;
-          countOfIterations += 1;
+          wedgesNeeded -= 6;
           break;
         case 'medium':
-          numOfWedges += 8;
-          countOfIterations += 1;
+          wedgesNeeded -= 8;
           break;
         case 'large':
-          numOfWedges += 10;
-          countOfIterations += 1;
+          wedgesNeeded -= 10;
           break;
       }
-
-    })
   }
 
-  return countOfIterations;
+  return numOfLimes;
 }
+
+// let i = 0;
+
+// while (i < 100) {
+//   i = i + 2;
+
+//   if (i % 3 === 0) {
+//     continue;
+//   }
+
+//   // The code here will only be executed when i was not divisible
+//   // by 3 in the check above.
+// }
+
 
 
 /**
@@ -79,5 +82,33 @@ export function limesToCut(wedgesNeeded, limes) {
  * @returns {string[]} remaining orders after the time is up
  */
 export function remainingOrders(timeLeft, orders) {
-  throw new Error('Please implement the remainingOrders function');
+
+  while (timeLeft > 0 && orders.length > 0) {
+
+    let nextOrder = orders.shift();
+
+    switch(nextOrder) {
+      case 'Pure Strawberry Joy':
+        timeLeft -= 0.5;
+        break;
+      case 'Energizer':
+        timeLeft -= 1.5;
+        break;
+      case 'Green Garden':
+        timeLeft -= 1.5;
+        break;
+      case 'Tropical Island':
+        timeLeft -= 3;
+        break;
+      case 'All or Nothing':
+        timeLeft -= 5;
+        break;
+      default:
+        timeLeft -= 2.5;
+        break;
+    }
+
+  }
+
+  return orders;
 }
