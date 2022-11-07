@@ -71,7 +71,19 @@ export function middleTwo(deck) {
  */
 
 export function sandwichTrick(deck) {
-  throw new Error('Implement the sandwichTrick function');
+  const first = deck[0]
+  const last = deck[deck.length - 1]
+
+  // Deleting the first and the last card
+  deck.splice(0, 1)
+  deck.splice(deck.length - 1, 1)
+
+  // Calculating the index where to insert and inserting
+  const insertIndex = deck.length / 2
+
+  deck.splice(insertIndex, 0, last, first)
+
+  return deck
 }
 
 /**
