@@ -105,7 +105,7 @@ export function twoIsSpecial(deck) {
  * @returns {number[]} ordered deck
  */
 export function perfectlyOrdered(deck) {
-  throw new Error('Implement the perfectlyOrdered function');
+  return deck.sort(function(a,b){return a - b})
 }
 
 /**
