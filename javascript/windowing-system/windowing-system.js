@@ -32,4 +32,12 @@ export class ProgramWindow {
     this.size = new Size();
     this.position = new Position();
   }
+
+  resize(newSize) {
+    if (newSize.width < 1 || newSize.height < 1) {
+      this.size = new Size(1, 1)
+    } else if (newSize.width <= this.screenSize.width || newSize.height <= this.screenSize.height) {
+      this.size = new Size(newSize.width, newSize.height)
+    }
+  }
 }
