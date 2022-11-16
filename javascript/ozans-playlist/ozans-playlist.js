@@ -58,5 +58,6 @@ export function deleteTrack(playlist, track) {
  * @returns {string[]} list of artists
  */
 export function listArtists(playlist) {
-  throw new Error('Please implement the listArtists function');
+  const set = new Set(playlist.map(song => song.slice(song.indexOf('-') + 1).trim()))
+  return [...set]
 }
