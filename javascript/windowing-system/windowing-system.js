@@ -34,10 +34,32 @@ export class ProgramWindow {
   }
 
   resize(newSize) {
-    if (newSize.width < 1 || newSize.height < 1) {
-      this.size = new Size(1, 1)
-    } else if (newSize.width <= this.screenSize.width || newSize.height <= this.screenSize.height) {
-      this.size = new Size(newSize.width, newSize.height)
-    }
+    const maxWidth = this.screenSize.width - this.position.x;
+    const maxHeight = this.screenSize.height - this.position.y;
+
+    const newWidth = Math.max(1, Math.min(newSize.width, maxWidth));
+    const newHeight = Math.max(1, Math.min(newSize.height, maxHeight));
+
+    this.size = new Size(newWidth, newHeight)
   }
+
+  move(newPosition) {
+    const maxX = this.screenSize.width - this.size.width;
+    const maxY = this.screenSize.height - this.size.height;
+
+    const newX = Math.max(0, Math.min(newPosition.x, maxX));
+    const newY = Math.max(0, Math.min(newPosition.y, maxY));
+
+    this.position = new Position(newX, newY);
+  }
+}
+
+export function changeWindow(programWindow) {
+
+  const newSize = new Size(400, 300)
+  programWindow.resize(newSize);
+
+  const newPosition = new Position(100, 150)
+  programWindow.move(newPosition)
+  return programWindow;
 }
