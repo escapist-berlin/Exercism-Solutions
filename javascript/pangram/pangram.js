@@ -5,10 +5,6 @@
 
 // Creating an array of alphabet
 const alphabet = [...Array(26)].map((_, i) => String.fromCharCode(i + 97))
-// Creating an object of alphabet where every letter is a key, and initail value equals 0
-const alphabetObject = Object.fromEntries(alphabet.map(char => ([char, 0])))
-// console.log(alphabetObject)
-
 
 export const isPangram = (sentence) => {
 
