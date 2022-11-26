@@ -7,23 +7,20 @@ export class Matrix {
   constructor(str) {
     // Creating array of rows arrays
     const rowsArr = str.split("\n").map((item) => item.split(" ").map(Number))
-    // console.log(rowsArr)
-    
+
+    // Calculating the ammount of columns
     const numOfColumns = rowsArr[0].length
+    // Creating array of columns arrays
     const columnsArr = []
-    const currentIndex = 0
+    let currentColumn = 0
 
-    
-    
-    // rowsArr.forEach((row) => {
-      // const column = row.filter(item => row.indexof(item) === currentIndex);
-      // currentIndex += 1;
-      // columnsArr.push(column);
-    // })
+    while (currentColumn < numOfColumns) {
+      const column = rowsArr.map(x => x[currentColumn]);
+      columnsArr.push(column)
+      currentColumn += 1
+    }
 
-    // console.log(columnsArr)
-    
-    return { rows: rowsArr }
+    return { rows: rowsArr, columns: columnsArr }
   }
 
   get rows() {
