@@ -4,5 +4,23 @@
 //
 
 export const hey = (message) => {
-  throw new Error('Remove this statement and implement this function');
+
+  const speech = message.trim()
+  const isShouted = speech === speech.toUpperCase()
+  const isQuestion = speech.endsWith('?')
+
+  if (speech === "") {
+    return "Fine. Be that way!"
+  }
+  
+  switch (true) {
+    case isQuestion && isShouted && /[a-zA-Z]/.test(speech):
+      return "Calm down, I know what I'm doing!"
+    case isShouted && /[a-zA-Z]/.test(speech):
+      return 'Whoa, chill out!'
+    case isQuestion:
+      return 'Sure.'
+    default:
+      return 'Whatever.'
+  }
 };
