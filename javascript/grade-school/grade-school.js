@@ -18,16 +18,27 @@ export class GradeSchool {
   }
 
   add(name, grade) {
+
+    // If name already exists in any grade it will be removed from it
+    for (const grade in this._school) {
+     if (this._school[grade].includes(name)) {
+       const index = this._school[grade].indexOf(name)
+       this._school[grade].splice(index, 1)
+     }
+    }
+    
     if (this._school.hasOwnProperty(grade)) {
       this._school[grade].push(name)
     } else {
       this._school[grade] = [name]
     }
+
   }
 
   grade(num) {
     if (this._school.hasOwnProperty(num)) {
       const result = this._school[num].sort()
+      // return a copy of the grade
       return JSON.parse(JSON.stringify(result))
     } else {
       return []
