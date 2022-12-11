@@ -4,10 +4,12 @@
 //
 
 export class GradeSchool {
+  // initialize as empty object
   constructor() {
     this._school = {}
   }
-  
+
+  // return a copy of the roster
   roster() {
     for (const grade in this._school) {
       this._school[grade].sort()
@@ -25,7 +27,8 @@ export class GradeSchool {
 
   grade(num) {
     if (this._school.hasOwnProperty(num)) {
-      return this._school[num].sort()
+      const result = this._school[num].sort()
+      return JSON.parse(JSON.stringify(result))
     } else {
       return []
     }
