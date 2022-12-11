@@ -12,7 +12,7 @@ export class GradeSchool {
     for (const grade in this._school) {
       this._school[grade].sort()
     }
-    return this._school
+    return structuredClone(this._school)
   }
 
   add(name, grade) {
