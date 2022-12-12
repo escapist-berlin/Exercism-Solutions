@@ -14,12 +14,14 @@ export const classify = (num) => {
 
   // Find all proper divisors and calculate aliquot sum
   const properDivisors = arr.filter(item => Number.isInteger(num / item))
-  const aliquotSum = properDivisors.reduce((acc, cur) => acc + cur)
+  const aliquotSum = arr.length === 0 ? null : properDivisors.reduce((acc, cur) => acc + cur)
 
-  if (aliquotSum === num) {
-    return "perfect"
+  switch (true) {
+    case (aliquotSum === num):
+      return "perfect"
+    case (aliquotSum > num):
+      return "abundant"
+    case (aliquotSum < num || aliquotSum === null):
+      return "deficient"
   }
-
-  // console.log()
-
 };
