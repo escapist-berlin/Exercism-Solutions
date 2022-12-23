@@ -1,5 +1,5 @@
 //
-// Greedy Algorithm - iterate through each value ensuring that the highest values are evaluated first 
+// Greedy Algorithm - iterate through each value ensuring that the highest values are evaluated first
 // https://medium.com/@chyanpin/solving-leetcodes-integer-to-roman-challenge-f850347c377c
 
 const ROMAN = [
@@ -22,20 +22,30 @@ export const toRoman = (num) => {
   let romanString = ""
   let intNum = num
 
-  for (let i = 0; i < ROMAN.length; i++) {
-    
-    console.log(`index in for loop ${i} - ${ROMAN[i]}`)
-    
-    while(intNum >= ROMAN[i][1]) {
-      
-      console.log("intNum", intNum)
-      console.log("Arabic Number", ROMAN[i][1])
-      console.log("Roman Number", ROMAN[i][0])
-      
-      intNum -= ROMAN[i][1]
-      romanString += ROMAN[i][0]
-    }
-  }
-  return romanString
+  // for (let i = 0; i < ROMAN.length; i++) {
 
+  //   while(intNum >= ROMAN[i][1]) {
+
+  //     intNum -= ROMAN[i][1]
+  //     romanString += ROMAN[i][0]
+  //   }
+
+  // }
+
+  ROMAN.forEach(item => {
+    while(intNum >= item[1]) {
+
+      intNum -= item[1]
+      romanString += item[0]
+    }
+  })
+
+  // ROMAN.forEach(item => {
+  //   if (num >= item[1]) {
+  //     num -= item[1]
+  //     romanString += item[0]
+  //   }
+  // })
+
+  return romanString
 };
