@@ -15,6 +15,6 @@ const colorCodes: ColorCode = {
   white: 9
 }
 
-export function decodedValue(input: string[]) {
+export function decodedValue(input: string[]): number {
   return Number(`${colorCodes[input[0]]}${colorCodes[input[1]]}`)
 }
