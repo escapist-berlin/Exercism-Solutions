@@ -7,4 +7,8 @@ export const transpose = (input) => {
   if (input.length === 0) {
     return input
   }
+
+  if (input.length === 1) {
+    return input[0].split("")
+  }
 };

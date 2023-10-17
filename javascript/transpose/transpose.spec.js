@@ -5,7 +5,7 @@ describe('Transpose', () => {
     expect(transpose([])).toEqual([]);
   });
 
-  xtest('two characters in a row', () => {
+  test('two characters in a row', () => {
     const input = ['A1'];
     const expected = ['A', '1'];
     expect(transpose(input)).toEqual(expected);
@@ -23,7 +23,7 @@ describe('Transpose', () => {
     expect(transpose(input)).toEqual(expected);
   });
 
-  xtest('single line', () => {
+  test('single line', () => {
     const input = ['Single line.'];
     const expected = [
       'S',
