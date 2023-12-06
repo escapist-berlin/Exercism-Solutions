@@ -27,8 +27,8 @@ def bake_time_remaining(time_elapsed):
 
 #TODO: Define the 'preparation_time_in_minutes()' function below.
 # You might also consider using 'PREPARATION_TIME' here, if you have it defined.
-def preparation_time_in_minutes():
-    pass
+def preparation_time_in_minutes(number_of_layers):
+    return number_of_layers * 2
 
 
 #TODO: define the 'elapsed_time_in_minutes()' function below.
