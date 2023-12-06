@@ -28,10 +28,24 @@ def bake_time_remaining(time_elapsed):
 #TODO: Define the 'preparation_time_in_minutes()' function below.
 # You might also consider using 'PREPARATION_TIME' here, if you have it defined.
 def preparation_time_in_minutes(number_of_layers):
+    """Calculate the prep time in munutes.
+
+    :param number_of_layers * 2 - prep time.
+    :return: number_of_layers * 2.
+
+    Function that returns prep time for given number of layers.
+    """
     return number_of_layers * 2
 
 
 #TODO: define the 'elapsed_time_in_minutes()' function below.
 # Remember to add a docstring (you can copy and then alter the one from bake_time_remaining.)
 def elapsed_time_in_minutes(number_of_layers, elapsed_bake_time):
+    """Calculate the elapsed time in munutes.
+
+    :param preparation_time_in_minutes(number_of_layers) - prep time.
+    :return: preparation_time_in_minutes(number_of_layers) + elapsed_bake_time.
+
+    Function that returns total elapsed time.
+    """
     return preparation_time_in_minutes(number_of_layers) + elapsed_bake_time
