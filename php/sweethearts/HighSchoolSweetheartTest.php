@@ -41,21 +41,21 @@ class HighSchoolSweetheartTest extends PHPUnit\Framework\TestCase
      * @testdox gets the first letter and appends a dot
      * @task_id 2
      */
-//    public function testCreatesInitial()
-//    {
-//        $sweetheart = new HighSchoolSweetheart();
-//        $this->assertEquals('B.', $sweetheart->initial('Betty'));
-//    }
+    public function testCreatesInitial()
+    {
+        $sweetheart = new HighSchoolSweetheart();
+        $this->assertEquals('B.', $sweetheart->initial('Betty'));
+    }
 
     /**
      * @testdox creates an uppercase initial
      * @task_id 2
      */
-//    public function testCreatesUppercaseInitial()
-//    {
-//        $sweetheart = new HighSchoolSweetheart();
-//        $this->assertEquals('J.', $sweetheart->initial('jim'));
-//    }
+    public function testCreatesUppercaseInitial()
+    {
+        $sweetheart = new HighSchoolSweetheart();
+        $this->assertEquals('J.', $sweetheart->initial('jim'));
+    }
 
     /**
      * @testdox creates a set of initials

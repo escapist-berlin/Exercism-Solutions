@@ -9,8 +9,9 @@ class HighSchoolSweetheart
 
     public function initial(string $name): string
     {
+        $firstLetter = ucfirst($this->firstLetter($name));
 
-        return '';
+        return "$firstLetter.";
     }
 
     public function initials(string $name): string
