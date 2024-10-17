@@ -61,11 +61,11 @@ class HighSchoolSweetheartTest extends PHPUnit\Framework\TestCase
      * @testdox creates a set of initials
      * @task_id 3
      */
-//    public function testCreatesInitials()
-//    {
-//        $sweetheart = new HighSchoolSweetheart();
-//        $this->assertEquals('L. M.', $sweetheart->initials('Linda Miller'));
-//    }
+    public function testCreatesInitials()
+    {
+        $sweetheart = new HighSchoolSweetheart();
+        $this->assertEquals('L. M.', $sweetheart->initials('Linda Miller'));
+    }
 
     /**
      * @testdox creates a set of initials, wrapped in a heart

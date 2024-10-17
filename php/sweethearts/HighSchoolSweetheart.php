@@ -16,7 +16,10 @@ class HighSchoolSweetheart
 
     public function initials(string $name): string
     {
-        throw new \BadFunctionCallException("Implement the function");
+        $firstName = $this->initial($name);
+        $lastName = $this->initial(strrchr($name, ' '));
+
+        return "$firstName $lastName";
     }
 
     public function pair(string $sweetheart_a, string $sweetheart_b): string
