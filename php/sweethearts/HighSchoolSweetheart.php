@@ -24,6 +24,25 @@ class HighSchoolSweetheart
 
     public function pair(string $sweetheart_a, string $sweetheart_b): string
     {
-        throw new \BadFunctionCallException("Implement the function");
+        $first = $this->initials($sweetheart_a);
+        $second = $this->initials($sweetheart_b);
+        $result = "$first  +  $second";
+
+        return <<<HEART_PAIR
+                 ******       ******
+               **      **   **      **
+             **         ** **         **
+            **            *            **
+            **                         **
+            **     $result     **
+             **                       **
+               **                   **
+                 **               **
+                   **           **
+                     **       **
+                       **   **
+                         ***
+                          *
+            HEART_PAIR;
     }
 }
