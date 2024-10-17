@@ -4,12 +4,13 @@ class HighSchoolSweetheart
 {
     public function firstLetter(string $name): string
     {
-        return substr($name, 0, 1);
+        return substr(trim($name), 0, 1);
     }
 
     public function initial(string $name): string
     {
-        throw new \BadFunctionCallException("Implement the function");
+
+        return '';
     }
 
     public function initials(string $name): string

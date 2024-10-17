@@ -21,21 +21,21 @@ class HighSchoolSweetheartTest extends PHPUnit\Framework\TestCase
      * @testdox getting the first letter doesn't change the case
      * @task_id 1
      */
-//    public function testFirstLetterDoesNotChangeCase()
-//    {
-//        $sweetheart = new HighSchoolSweetheart();
-//        $this->assertEquals('j', $sweetheart->firstLetter('jane'));
-//    }
+    public function testFirstLetterDoesNotChangeCase()
+    {
+        $sweetheart = new HighSchoolSweetheart();
+        $this->assertEquals('j', $sweetheart->firstLetter('jane'));
+    }
 
     /**
      * @testdox getting the first letter removes whitespace from the name
      * @task_id 1
      */
-//    public function testFirstLetterRemovesWhitespace()
-//    {
-//        $sweetheart = new HighSchoolSweetheart();
-//        $this->assertEquals('J', $sweetheart->firstLetter(' Jane'));
-//    }
+    public function testFirstLetterRemovesWhitespace()
+    {
+        $sweetheart = new HighSchoolSweetheart();
+        $this->assertEquals('J', $sweetheart->firstLetter(' Jane'));
+    }
 
     /**
      * @testdox gets the first letter and appends a dot
