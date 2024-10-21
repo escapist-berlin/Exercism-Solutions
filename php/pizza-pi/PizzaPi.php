@@ -12,9 +12,9 @@ class PizzaPi
         return $numOfPizzas * 125 / $sauceCanVolume;
     }
 
-    public function calculateCheeseCubeCoverage()
+    public function calculateCheeseCubeCoverage($cheeseDimension, $thickness, $diameter)
     {
-        throw new \BadFunctionCallException("Implement the function");
+        return floor($cheeseDimension**3 / ($thickness * 3.14 * $diameter));
     }
 
     public function calculateLeftOverSlices()
