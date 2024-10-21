@@ -17,8 +17,8 @@ class PizzaPi
         return floor($cheeseDimension**3 / ($thickness * 3.14 * $diameter));
     }
 
-    public function calculateLeftOverSlices()
+    public function calculateLeftOverSlices($numOfPizzas, $numbOfPersons)
     {
-        throw new \BadFunctionCallException("Implement the function");
+        return (8 * $numOfPizzas) % $numbOfPersons;
     }
 }
