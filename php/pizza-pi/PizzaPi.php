@@ -7,9 +7,9 @@ class PizzaPi
         return $numOfPizzas * (($numbOfPersons * 20) + 200);
     }
 
-    public function calculateSauceRequirement()
+    public function calculateSauceRequirement($numOfPizzas, $sauceCanVolume)
     {
-        throw new \BadFunctionCallException("Implement the function");
+        return $numOfPizzas * 125 / $sauceCanVolume;
     }
 
     public function calculateCheeseCubeCoverage()
