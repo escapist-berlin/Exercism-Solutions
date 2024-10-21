@@ -9,12 +9,12 @@ class PizzaPi
 
     public function calculateSauceRequirement($numOfPizzas, $sauceCanVolume)
     {
-        return $numOfPizzas * 125 / $sauceCanVolume;
+        return ($numOfPizzas * 125) / $sauceCanVolume;
     }
 
     public function calculateCheeseCubeCoverage($cheeseDimension, $thickness, $diameter)
     {
-        return floor($cheeseDimension**3 / ($thickness * 3.14 * $diameter));
+        return floor(($cheeseDimension ** 3) / ($thickness * pi() * $diameter));
     }
 
     public function calculateLeftOverSlices($numOfPizzas, $numbOfPersons)
