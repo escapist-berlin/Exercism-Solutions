@@ -20,7 +20,18 @@ export class DnDCharacter {
   }
 
   public static generateAbilityScore(): number {
-    throw new Error('Remove this statement and implement this function')
+    // Generate four random numbers (1-6).
+    let randomNums: number[] = [];
+
+    for (let step: number = 0; step < 4; step++) {
+      randomNums.push(Math.floor(Math.random() * (6 - 1 + 1)) + 1);
+    }
+    // Find the smallest value and discard it.
+    let filteredRandomNums: number[] = randomNums.sort().filter((_,i) => i)
+    // Sum the other three values and return that sum.
+    const sum: number = filteredRandomNums.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+    return sum;
   }
 
   public static getModifierFor(abilityValue: number): number {
