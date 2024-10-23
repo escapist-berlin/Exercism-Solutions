@@ -14,8 +14,8 @@ const orbitalPeriodMap: OrbitalPeriodMap = {
 }
 
 export function age(planet: string, seconds: number): number {
-  const orbitalPeriod = orbitalPeriodMap[planet.charAt(0).toUpperCase() + planet.slice(1)];
-  const yearInSeconds = 31557600 * orbitalPeriod;
+  const orbitalPeriod: number = orbitalPeriodMap[planet.charAt(0).toUpperCase() + planet.slice(1)];
+  const yearInSeconds: number = 31557600 * orbitalPeriod;
 
   return Math.round((seconds / yearInSeconds) * 100) / 100;
 }
