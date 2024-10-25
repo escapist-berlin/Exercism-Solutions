@@ -30,6 +30,6 @@ class AnnalynsInfiltration
         $is_prisoner_awake,
         $is_dog_present
     ) {
-        throw new \BadFunctionCallException("Implement the function");
+        return ($is_dog_present && !$is_archer_awake) || ($is_prisoner_awake && !$is_knight_awake && !$is_archer_awake);
     }
 }
