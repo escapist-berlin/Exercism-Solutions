@@ -21,7 +21,7 @@ class AnnalynsInfiltration
         $is_archer_awake,
         $is_prisoner_awake
     ) {
-        throw new \BadFunctionCallException("Implement the function");
+        return $is_prisoner_awake && !$is_archer_awake;
     }
 
     public function canLiberate(
