@@ -12,9 +12,7 @@ class AnnalynsInfiltration
         $is_archer_awake,
         $is_prisoner_awake
     ) {
-        $group = array($is_knight_awake, $is_archer_awake, $is_prisoner_awake);
-
-        return in_array(true, $group);
+        return $is_knight_awake || $is_archer_awake || $is_prisoner_awake;
     }
 
     public function canSignal(
