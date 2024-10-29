@@ -7,7 +7,7 @@ class ProgramWindow
     public $height;
     public $width;
 
-    function __construct($x, $y, $height, $width)
+    function __construct($x = 0, $y = 0, $height = 800, $width = 600)
     {
         $this->x = $x;
         $this->y = $y;
@@ -15,3 +15,4 @@ class ProgramWindow
         $this->width = $width;
     }
 }
+
