@@ -14,5 +14,11 @@ class ProgramWindow
         $this->height = $height;
         $this->width = $width;
     }
+
+    function resize($size)
+    {
+        $this->height = $size->height;
+        $this->width = $size->width;
+    }
 }
 
