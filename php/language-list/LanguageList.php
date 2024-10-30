@@ -11,3 +11,8 @@ function add_to_language_list($languages, $new_language)
 
     return $languages;
 }
+
+function prune_language_list($language_list)
+{
+    return array_splice($language_list, 1);
+}
