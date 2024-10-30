@@ -2,7 +2,7 @@
 
 function language_list(...$languages)
 {
-    return [...$languages];
+    return $languages;
 }
 
 function add_to_language_list($languages, $new_language)
