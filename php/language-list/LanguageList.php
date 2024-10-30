@@ -16,3 +16,8 @@ function prune_language_list($language_list)
 {
     return array_splice($language_list, 1);
 }
+
+function current_language($language_list)
+{
+    return $language_list[0];
+}
