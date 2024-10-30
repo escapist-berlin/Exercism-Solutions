@@ -21,3 +21,8 @@ function current_language($language_list)
 {
     return $language_list[0];
 }
+
+function language_list_length($language_list)
+{
+    return count($language_list);
+}
