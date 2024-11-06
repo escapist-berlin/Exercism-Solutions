@@ -12,7 +12,7 @@ class Form
         return mb_str_split($word);
     }
 
-    function checkLength($word, $max_length)
+    function checkLength(string $word, int $max_length): bool
     {
         $difference = mb_strlen($word) - $max_length;
         return $difference <= 0;
