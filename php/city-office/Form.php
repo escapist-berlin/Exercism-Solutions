@@ -7,7 +7,7 @@ class Form
         return str_repeat(" ", $length);
     }
 
-    function letters($word)
+    function letters(string $word): array
     {
         return mb_str_split($word);
     }
