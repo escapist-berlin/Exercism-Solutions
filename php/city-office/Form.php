@@ -18,7 +18,7 @@ class Form
         return $difference <= 0;
     }
 
-    function formatAddress($address)
+    function formatAddress(Address $address): string
     {
         $formatted_street = mb_strtoupper($address->street);
         $formatted_postal_code = mb_strtoupper($address->postal_code);
