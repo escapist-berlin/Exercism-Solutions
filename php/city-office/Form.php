@@ -2,7 +2,7 @@
 
 class Form
 {
-    function blanks($length)
+    function blanks(int $length): string
     {
         return str_repeat(" ", $length);
     }
